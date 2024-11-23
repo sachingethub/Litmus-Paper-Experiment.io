@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Litmus Test</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Interactive Litmus Test</h1>
+    <p>Drag and dip the blue and red litmus paper into each beaker and note your observations.</p>
+    
+    <!-- Litmus Papers -->
+    <div id="litmus-papers">
+        <div id="blue-paper" draggable="true">Blue Litmus Paper</div>
+        <div id="red-paper" draggable="true">Red Litmus Paper</div>
+    </div>
+
+    <!-- Beakers -->
+    <div id="beakers">
+        <div class="beaker" data-id="A" data-type="neutral">Beaker A (Water)</div>
+        <div class="beaker" data-id="B" data-type="acidic">Beaker B (Orange Juice)</div>
+        <div class="beaker" data-id="C" data-type="acidic">Beaker C (Vinegar)</div>
+        <div class="beaker" data-id="D" data-type="neutral">Beaker D (Tea)</div>
+        <div class="beaker" data-id="E" data-type="alkaline">Beaker E (Dilute Soap)</div>
+        <div class="beaker" data-id="F" data-type="alkaline">Beaker F (Dilute Sodium Hydroxide)</div>
+        <div class="beaker" data-id="G" data-type="acidic">Beaker G (Dilute HCl)</div>
+    </div>
+
+    <!-- Observation Table -->
+    <h2>Your Observations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Substance</th>
+                <th>Effect on Blue Litmus Paper</th>
+                <th>Effect on Red Litmus Paper</th>
+                <th>Is the substance acidic, alkaline, or neutral?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Beaker A (Water)</td>
+                <td><input type="text" id="blue-a"></td>
+                <td><input type="text" id="red-a"></td>
+                <td><input type="text" id="type-a"></td>
+            </tr>
+            <tr>
+                <td>Beaker B (Orange Juice)</td>
+                <td><input type="text" id="blue-b"></td>
+                <td><input type="text" id="red-b"></td>
+                <td><input type="text" id="type-b"></td>
+            </tr>
+            <tr>
+                <td>Beaker C (Vinegar)</td>
+                <td><input type="text" id="blue-c"></td>
+                <td><input type="text" id="red-c"></td>
+                <td><input type="text" id="type-c"></td>
+            </tr>
+            <tr>
+                <td>Beaker D (Tea)</td>
+                <td><input type="text" id="blue-d"></td>
+                <td><input type="text" id="red-d"></td>
+                <td><input type="text" id="type-d"></td>
+            </tr>
+            <tr>
+                <td>Beaker E (Dilute Liquid Soap)</td>
+                <td><input type="text" id="blue-e"></td>
+                <td><input type="text" id="red-e"></td>
+                <td><input type="text" id="type-e"></td>
+            </tr>
+            <tr>
+                <td>Beaker F (Dilute Sodium Hydroxide)</td>
+                <td><input type="text" id="blue-f"></td>
+                <td><input type="text" id="red-f"></td>
+                <td><input type="text" id="type-f"></td>
+            </tr>
+            <tr>
+                <td>Beaker G (Dilute Hydrochloric Acid)</td>
+                <td><input type="text" id="blue-g"></td>
+                <td><input type="text" id="red-g"></td>
+                <td><input type="text" id="type-g"></td>
+            </tr>
+        </tbody>        
+    </table>
+    
+    <!-- Check Answers and Reset Buttons -->
+<div>
+    <button id="reset-observations">Reset</button>
+</div>
+
+    <!-- Correct Answers Table -->
+    <h2 id="correct-answers-header" style="display: none;">Correct Answers</h2>
+    <table id="correct-answers-table" style="display: none;">
+        <thead>
+            <tr>
+                <th>Substance</th>
+                <th>Effect on Blue Litmus Paper</th>
+                <th>Effect on Red Litmus Paper</th>
+                <th>Is the substance acidic, alkaline, or neutral?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Beaker A (Water)</td>
+                <td>No Change</td>
+                <td>No Change</td>
+                <td>Neutral</td>
+            </tr>
+            <tr>
+                <td>Beaker B (Orange Juice)</td>
+                <td>Turns Red</td>
+                <td>No Change</td>
+                <td>Acidic</td>
+            </tr>
+            <tr>
+                <td>Beaker C (Vinegar)</td>
+                <td>Turns Red</td>
+                <td>No Change</td>
+                <td>Acidic</td>
+            </tr>
+            <tr>
+                <td>Beaker D (Tea)</td>
+                <td>No Change</td>
+                <td>No Change</td>
+                <td>Neutral</td>
+            </tr>
+            <tr>
+                <td>Beaker E (Dilute Soap)</td>
+                <td>No Change</td>
+                <td>Turns Blue</td>
+                <td>Alkaline</td>
+            </tr>
+            <tr>
+                <td>Beaker F (Dilute Sodium Hydroxide)</td>
+                <td>No Change</td>
+                <td>Turns Blue</td>
+                <td>Alkaline</td>
+            </tr>
+            <tr>
+                <td>Beaker G (Dilute HCl)</td>
+                <td>Turns Red</td>
+                <td>No Change</td>
+                <td>Acidic</td>
+            </tr>
+        </tbody>        
+    </table>
+    
+    <!-- Check Answers Button -->
+    <button id="check-answers">Check Answers</button>
+    
+    <script src="/app.js"></script>
+</body>
+</html>
